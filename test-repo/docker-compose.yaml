@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  test:
+    container_name: test_eks
+    image: udaydosajh/test:test_eks_v1
+    ports:
+      - 10010:10010
+    environment:
+      PORT: "10010"
+      TEST_SNO: "19"
