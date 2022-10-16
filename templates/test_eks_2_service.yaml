@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: testeks2service
+spec:
+  selector:
+    app.kubernetes.io/name: testeks2
+  ports:
+    - protocol: TCP
+      name: 1011tcp
+      port: 10011
+      targetPort: 10011

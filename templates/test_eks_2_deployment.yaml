@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testeks2
+  labels:
+    app.kubernetes.io/name: testeks2
+spec:
+  containers:
+  - name: testeks2
+    image: udaydosajh/test:test_eks_v2
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 10011
+    env:
+      - name: PORT
+        value: "10011"
+      - name: TEST_SNO
+        value: "20"
+  imagePullSecrets:
+    - name: regcred3
